@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Hill Climber</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚙</text></svg>" />
+  <script type="module" crossorigin src="./assets/index-D_KLbHbc.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DlcGDrzL.css">
+</head>
+<body>
+  <div id="app">
+    <svg id="scene" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid slice"></svg>
+
+    <div id="stagebar" class="pill">
+      <button id="prev" aria-label="Previous stage">◀</button>
+      <span id="stagelabel">STAGE 1 / 5</span>
+      <button id="next" aria-label="Next stage">▶</button>
+    </div>
+
+    <div id="hud" class="pill">
+      <div><small>DISTANCE</small><b id="dist">0 M</b></div>
+      <div><small>SPEED</small><b id="speed">0 KM/H</b></div>
+      <div class="nitro"><small>NITRO</small><i><u id="nitro"></u></i></div>
+      <button id="pause" aria-label="Pause">❚❚</button>
+      <button id="mute" aria-label="Sound">🔊</button>
+      <button id="music" aria-label="Music">🎵</button>
+    </div>
+
+    <div id="hints" class="pill">
+      <kbd>D</kbd>/<kbd>→</kbd> Drive <kbd>A</kbd>/<kbd>←</kbd> Tilt / Flip
+      <kbd>W</kbd>/<kbd>↑</kbd> Jump <kbd class="wide">SPACE</kbd> Nitro <kbd>R</kbd> Restart
+    </div>
+
+    <div id="touch-left" class="touch">
+      <button data-k="tilt" aria-label="Tilt">◀</button>
+      <button data-k="drive" aria-label="Drive">▶</button>
+    </div>
+    <div id="touch-right" class="touch">
+      <button data-k="jump" aria-label="Jump">⤒</button>
+      <button data-k="nitro" aria-label="Nitro">🔥</button>
+    </div>
+
+    <div id="modal" class="hidden"><div class="card">
+      <span class="tag" id="m-tag"></span>
+      <h1 id="m-title"></h1>
+      <p id="m-text"></p>
+      <button id="m-btn"></button>
+    </div></div>
+  </div>
+</body>
+</html>
